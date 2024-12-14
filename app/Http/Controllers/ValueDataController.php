@@ -46,6 +46,7 @@ class ValueDataController extends Controller
   public function getByKey($key, Request $request)
   {
     $timestamp = $request->query('timestamp');
+    // check timestamp
     if($timestamp) {
       if(!is_numeric($timestamp)) {
         return response()->json(['error' => 'Timestamp must be numeric'], 400);
