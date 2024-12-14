@@ -61,6 +61,9 @@ To ensure everything is working correctly, run the unit tests:
 php artisan test
 ```
 
+## Code Coverage
+You can view the code coverage results for this project on [Codecov](https://app.codecov.io/github/waiwen1001/secretLabTest/tree/master/).
+
 ## API Documentation
 
 ### Object API
