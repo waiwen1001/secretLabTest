@@ -32,4 +32,9 @@ jobs:
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
-      run: php artisan test
+      run: php artisan test --coverage-text --coverage-clover=coverage.xml
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v5
+      with:
+        file: coverage.xml
+        token: ${{ secrets.CODECOV_TOKEN }}
